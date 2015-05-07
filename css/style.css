@@ -1,0 +1,294 @@
+body{
+	font-family:"Play"tahoma, arial;
+	font-size: 30px;
+	min-width: 1200px;
+	background-image: url("../img/pattern_2.jpg");
+}
+p{
+	position: absolute;
+}
+
+i{
+	position: absolute;
+	font-size: 50px;
+	line-height: 50px;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	color: #000;
+}
+.rotate{
+	transform: rotate(180deg);
+	bottom: 10px;
+	right: 10px;
+}
+.flipper:active .c-pos-medium,
+.flipper:active i .rotate{
+	transition: .2s;
+	transform: rotateZ(360deg);
+	transform-style: preserve-3d;
+}
+.flipper:active .c-pos{
+	transition: .2s;
+	transform: rotateY(360deg);
+	transform-style: preserve-3d;
+}
+.ba-container{
+	width: 1200px;
+	margin: 20px auto;
+}
+.flip-container {
+	perspective: 500px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.flip-container:active .flipper, .flip-container:active .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	position: relative;
+	width: 280px;
+	height: 420px;
+
+}
+.flipper {
+	transition: .7s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 20px;
+	border: 3px solid #7c592f;
+}
+.front:hover{
+	border-color: #a7c0f3;
+	box-shadow: rgba(76, 207, 122, 0.5) 0px 0px 10px 10px;
+}
+.front {
+	z-index: 2;
+	padding: 10px;
+	position: relative;
+	background-color: #fff;
+	transition: .5s ease-in-out;
+}
+.back {
+	transform: rotateY(180deg);
+	background-image:url("../img/back.jpg");
+	background-size: cover;
+}
+.hearts p,
+.diamonds p,
+.hearts i,
+.diamonds i{
+	color: red;
+}
+.spades p:after,
+.clubs p:after,
+.hearts p:after,
+.diamonds p:after{
+	font-size: 35px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	line-height: 20px;
+}
+.spades p:after{
+	content: "♠";
+}
+.clubs p:after{
+	content: "♣";
+}
+.hearts p:after{
+	content: "♥";
+}
+.diamonds p:after{
+	content: "♦";
+}
+.c-pos{
+	top: 45px;
+	left: 15px;
+}
+.kings .c-pos-rot,
+.queens .c-pos-rot,
+.jacks .c-pos-rot{
+	bottom: 45px;
+	right: 15px;
+}
+/*JOCKERS*/
+.jokers .sober{
+	background-image: url("../img/joker.jpg");
+}
+.jokers .drunk{
+	background-image: url("../img/joker_drunk.jpg");
+	color: red;
+}
+.jokers .wrapp{
+width: 590px;
+margin-left: auto;
+margin-right: auto;
+}
+.jokers .flip-container:last-child{
+	margin-left: 10px;
+}
+.c-pos-medium{
+	font-size: 80px;
+	line-height: 80px;
+	width: 80px;
+	height: 80px;
+}
+/*KINGS*/
+.kings .spades{
+	background-image: url("../img/king_spades.jpg");
+}
+.kings .clubs{
+	background-image: url("../img/king_clubs.jpg");
+}
+.kings .hearts{
+	background-image: url("../img/king_hearts.jpg");
+}
+.kings .diamonds{
+	background-image: url("../img/king_diamonds.jpg");
+}
+/*QUEENS*/
+.queens .spades{
+	background-image: url("../img/queen_spades.jpg");
+}
+.queens .clubs{
+	background-image: url("../img/queen_clubs.jpg");
+}
+.queens .hearts{
+	background-image: url("../img/queen_hearts.jpg");
+}
+.queens .diamonds{
+	background-image: url("../img/queen_diamonds.jpg");
+}
+/*JACKS*/
+.jacks .spades{
+	background-image: url("../img/jack_spades.jpg");
+}
+.jacks .clubs{
+	background-image: url("../img/jack_clubs.jpg");
+}
+.jacks .hearts{
+	background-image: url("../img/jack_hearts.jpg");
+}
+.jacks .diamonds{
+	background-image: url("../img/jack_diamonds.jpg");
+}
+/*ACES*/
+.aces .c-pos-big{
+	position: absolute;
+	font-size: 120px;
+	line-height: 120px;
+	text-align: center;
+	margin: auto;
+	width: 120px;
+	height: 120px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+/*TEN*/
+.c-pos-medium:first-of-type{
+	top: 10px;
+	left: 30px;
+}
+.c-pos-medium:nth-of-type(2){
+	top: 10px;
+	right: 30px;
+}
+.c-pos-medium:nth-of-type(3){
+	top: 60px;
+	right: 95px;
+}
+.c-pos-medium:nth-of-type(4){
+	top: 110px;
+	left: 30px;
+}
+.c-pos-medium:nth-of-type(5){
+	top: 110px;
+	right: 30px;
+}
+.c-pos-medium:nth-of-type(6){
+	bottom: 10px;
+	left: 30px;
+}
+.c-pos-medium:nth-of-type(7){
+	bottom: 10px;
+	right: 30px;
+}
+.c-pos-medium:nth-of-type(8){
+	bottom: 60px;
+	right: 95px;
+}
+.c-pos-medium:nth-of-type(9){
+	bottom: 110px;
+	left: 30px;
+}
+.c-pos-medium:nth-of-type(10){
+	bottom: 110px;
+	right: 30px;
+}
+/*NINE*/
+.nines .c-pos-medium:nth-of-type(8){
+	bottom: 110px;
+	right: 30px;
+}
+.threes .c-pos-medium:nth-of-type(2),
+.fives .c-pos-medium:nth-of-type(3),
+.nines .c-pos-medium:nth-of-type(3){
+	top: 165px;
+	right: 95px;
+}
+/*EIGHT*/
+.sixs .c-pos-medium:nth-of-type(4),
+.sevens .c-pos-medium:nth-of-type(4),
+.eights .c-pos-medium:nth-of-type(4){
+	top: 165px;
+}
+.sevens .c-pos-medium:nth-of-type(5),
+.eights .c-pos-medium:nth-of-type(5){
+	top: 165px;
+}
+.eights .c-pos-medium:nth-of-type(8){
+	bottom: 85px;
+	right: 95px;
+}
+.sevens .c-pos-medium:nth-of-type(3),
+.eights .c-pos-medium:nth-of-type(3){
+	top: 85px;
+	right: 95px;
+}
+/*SIX*/
+.sixs .c-pos-medium:nth-of-type(3){
+	top: 165px;
+	right: 30px;
+}
+.twos .c-pos-medium:nth-of-type(2),
+.threes .c-pos-medium:nth-of-type(3),
+.fours .c-pos-medium:nth-of-type(3),
+.fours .c-pos-medium:nth-of-type(4),
+.fives .c-pos-medium:nth-of-type(4),
+.fives .c-pos-medium:nth-of-type(5),
+.sixs .c-pos-medium:nth-of-type(5){
+	top: 325px;
+}
+/*FOUR*/
+.fours .c-pos-medium:nth-of-type(3){
+	right: 30px;
+}
+/*THREE*/
+.twos .c-pos-medium:nth-of-type(2),
+.twos .c-pos-medium:first-of-type,
+.threes .c-pos-medium:first-of-type{
+	left: 95px;
+}
+/*TWO*/
+
